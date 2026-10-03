@@ -21,12 +21,14 @@ const Footer = (props) => (
 )
 
 const App = () => {
-  const course = 'CSIT340'
-  const parts = [
-    { name: 'CSIT327', units: 3 },
-    { name: 'IT321', units: 3 },
-    { name: 'CSIT111', units: 3 },
-  ]
+  const course = {
+    name: 'CSIT340',
+    parts: [
+      { name: 'CSIT327', units: 3 },
+      { name: 'IT321', units: 3 },
+      { name: 'CSIT111', units: 3 },
+    ],
+  }
 
   const name = 'Mary Claire Lauron'
   const code = 'CSIT340'
@@ -34,9 +36,9 @@ const App = () => {
 
   return (
     <div>
-      <Header course={course} />
-      <Content parts={parts} />
-      <Total parts={parts} />
+      <Header course={course.name} />
+      <Content parts={course.parts} />
+      <Total parts={course.parts} />
       <Footer name={name} code={code} section={section} />
     </div>
   )
