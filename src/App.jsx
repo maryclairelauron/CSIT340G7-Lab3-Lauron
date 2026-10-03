@@ -1,10 +1,12 @@
 const Header = (props) => <h1>{props.course}</h1>
 
+const Part = (props) => <p>{props.name} - {props.units} units</p>
+
 const Content = (props) => (
   <div>
-    <p>{props.part1} - {props.units1} units</p>
-    <p>{props.part2} - {props.units2} units</p>
-    <p>{props.part3} - {props.units3} units</p>
+    <Part name={props.part1} units={props.units1} />
+    <Part name={props.part2} units={props.units2} />
+    <Part name={props.part3} units={props.units3} />
   </div>
 )
 
@@ -15,15 +17,15 @@ const Footer = (props) => (
 )
 
 const App = () => {
-  const course = "CSIT340"
-  const part1 = '[CSIT327]'
+  const course = 'CSIT340'
+  const part1 = 'CSIT327'
   const units1 = 3
-  const part2 = '[IT321]'
+  const part2 = 'IT321'
   const units2 = 3
-  const part3 = '[CSIT111]'
+  const part3 = 'CSIT111'
   const units3 = 3
 
-  const name = "Mary Claire Lauron"
+  const name = 'Mary Claire Lauron'
   const code = 'CSIT340'
   const section = 'G7'
 
